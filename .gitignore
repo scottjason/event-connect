@@ -10,3 +10,6 @@ pids
 # Environmental variables
 .env
 *.pem
+
+/node_modules/*
+.DS_Store
