@@ -1,0 +1,25 @@
+{
+  "name": "event-connect",
+  "version": "0.0.1",
+  "description": "event-connect",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottjason/event-connect.git"
+  },
+  "author": "Scott-Jason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottjason/event-connect/issues"
+  },
+  "homepage": "https://github.com/scottjason/event-connect/",
+  "dependencies": {
+    "dotenv": "^0.4.0",
+    "express": "^4.8.8",
+    "lastfmapi": "0.0.5",
+    "socket.io": "^1.1.0"
+  }
+}
