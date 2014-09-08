@@ -1,5 +1,3 @@
-var app = require('./appConfig.js');
-
 module.exports = {
   initialize: function( lastFm, io ) {
     this.lastFm = lastFm;
