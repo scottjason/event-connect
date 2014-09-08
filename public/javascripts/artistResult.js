@@ -9,7 +9,8 @@ ArtistResult.prototype.initialize = function( socket ) {
 ArtistResult.prototype.clean = function( result, callback ) {
   var resultsArr = [];
   var response = JSON.parse( result );
-    resultsArr.push( response.event );
+      resultsArr.push( response.event );
+
   callback( resultsArr, this.render );
 }
 

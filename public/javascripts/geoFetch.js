@@ -23,7 +23,6 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
-   // console.log(userLocation)
    this.renderLoading( userLocation );
    this.openSockets();
 }
@@ -36,7 +35,7 @@ GeoFetch.prototype.openSockets = function() {
 
 GeoFetch.prototype.renderLoading = function( location ) {
   $( "#loadingGeo" ).fadeOut( function(){
-    $( "#userLocation" ).html( location )
+    $( "#userLocation" ).html( location );
   }.bind( this ));
 }
 
