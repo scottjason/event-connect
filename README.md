@@ -24,6 +24,12 @@ Node.js, Express.js, Socket.io, Mustache.js, MongoDB
 
 -----------------------------------------------------------------------
 
+**APIs**
+
+LastFm, GoogleMaps & Geocoder
+
+-----------------------------------------------------------------------
+
 **What Else**
 
 No instances of **var self = this** were used or harmed during this production. 
