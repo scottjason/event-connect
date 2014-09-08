@@ -11,7 +11,9 @@ GeoFetch.prototype.initialize = function() {
 }
 
 GeoFetch.prototype.geoCallback = function( position ) {
+  this.renderLoading();
   this.socket.emit( 'geoPass', position.coords.latitude, position.coords.longitude );
+
   var latLng = new google.maps.LatLng( position.coords.latitude, position.coords.longitude );
   var coder = new google.maps.Geocoder();
       coder.geocode( { 'latLng': latLng }, this.reverseGeoCallback.bind( this ) );
@@ -21,7 +23,7 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
-   this.renderUserLocation( userLocation );
+   this.renderLocation( userLocation );
    this.openSockets();
 }
 
@@ -31,7 +33,11 @@ GeoFetch.prototype.openSockets = function() {
   ArtistFetch.initialize( this.socket );
 }
 
-GeoFetch.prototype.renderUserLocation = function( location ) {
+GeoFetch.prototype.renderLoading = function() {
+  console.log("loading")
+}
+
+GeoFetch.prototype.renderLocation = function( location ) {
   console.log( location );
 }
 

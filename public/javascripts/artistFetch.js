@@ -2,8 +2,8 @@ function ArtistFetch() {}
 
 ArtistFetch.prototype.initialize = function( socket ) {
   this.socket = socket;
-  var selectedArtist = document.getElementById("artistFormInput");
-  selectedArtist.addEventListener( "submit", this.callback.bind( this ), false );
+  // var selectedArtist = document.getElementById("artistFormInput");
+  // selectedArtist.addEventListener( "submit", this.callback.bind( this ), false );
 }
 
 ArtistFetch.prototype.callback = function( event ) {

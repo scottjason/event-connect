@@ -9,6 +9,9 @@
     background-color: #333;
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
+.event-connect-title{
+display: inline-block !important;
+}
 a:link, a:visited {
     color: #eee;
 }
