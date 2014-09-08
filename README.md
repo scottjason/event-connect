@@ -27,6 +27,7 @@ Node.js, Express.js, Socket.io, Mustache.js, MongoDB
 **What Else**
 
 No instances of **var self = this** were used or harmed during this production. 
+
 -----------------------------------------------------------------------
 
 **Authored By**
