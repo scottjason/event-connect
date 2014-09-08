@@ -10,7 +10,16 @@
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
 /* ------- BEGIN TOUCH UPS ------- */
+#userLocation{
+font-size: 0.7em;
+display: inline-block;
+float: right;
+color: #d35400;
+}
 
+#localTarget{
+    font-size: .75em;
+}
 #sub-title {
     font-size: .9em;
 }

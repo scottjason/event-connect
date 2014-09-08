@@ -23,7 +23,7 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
-
+   // console.log(userLocation)
    this.renderLoading( userLocation );
    this.openSockets();
 }
@@ -35,16 +35,7 @@ GeoFetch.prototype.openSockets = function() {
 }
 
 GeoFetch.prototype.renderLoading = function( location ) {
-    var output = $("#output");
-    var template = $("#test1").html();
-    var html = Mustache.render(template, location);
-    output.append(html);
-
-
-
-
-
-
+  $( "#userLocation" ).html( location );
 }
 
 GeoFetch.prototype.errorHandler = function( error ) {
@@ -55,8 +46,8 @@ GeoFetch.prototype.errorHandler = function( error ) {
 
 var GeoFetch = new GeoFetch;
 GeoFetch.initialize();
-})
 
+});
 
 
 
