@@ -22,7 +22,7 @@ ArtistResult.prototype.filter = function( resultsArr, callback ) {
 }
 
 ArtistResult.prototype.render = function( resultsArr ) {
-  cosnole.log( resultsArr );
+  console.log( resultsArr );
 }
 
 var ArtistResult = new ArtistResult;
