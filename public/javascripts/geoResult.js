@@ -1,5 +1,4 @@
-function GeoResult(){
-}
+function GeoResult(){}
 
 GeoResult.prototype.listen = function( socket ) {
   socket.on('geoResult', function( result ) {
