@@ -11,8 +11,6 @@ GeoFetch.prototype.initialize = function() {
     var welcomeText = document.getElementById( 'welcome-text' );
         welcomeText.style.display='inline-block';
 
-
-
   if ( navigator.geolocation && typeof ( navigator.geolocation.getCurrentPosition ) == "function") {
        navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ), this.errorHandler.bind( this ), { maximumAge: 75000 } );
   }
@@ -31,20 +29,19 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
+
    this.renderLoading( userLocation );
    this.openSockets();
 }
 
 GeoFetch.prototype.openSockets = function() {
   GeoResult.initialize( this.socket );
-  ArtistResult.initialize( this.socket );
-  ArtistFetch.initialize( this.socket );
+    ArtistResult.initialize( this.socket );
+      ArtistFetch.initialize( this.socket );
 }
 
 GeoFetch.prototype.renderLoading = function( location ) {
-// var template = "{{location}}";
-// html = Mustache.to_html(template, location);
-// document.write(html)
+  console.log( location )
 }
 
 GeoFetch.prototype.errorHandler = function( error ) {

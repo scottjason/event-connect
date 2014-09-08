@@ -9,23 +9,37 @@
     background-color: #333;
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
+/* ------- BEGIN TOUCH UPS ------- */
+
+#sub-title {
+    font-size: .8em;
+}
+#geo-note {
+    font-size: .8em;
+}
+#reverse-geo {
+    margin-left: 420px;
+    font-size: .9em;
+}
+#welcome-text {
+    display: inline-block;
+}
+
+.event-connect-title {
+  display: inline-block !important;
+}
+/* ------- END TOUCH UPS ------- */
 
 /* ------- BEGIN TABLE STYLING ------- */
 
-
-/* BUTTON INLINE ADJUSTEMENT */
-
-.form-control[type="email"]{
-    width : 100%;
+.form-control[type="email"] {
+    width: 100%;
     margin-bottom: 10px;
 }
-
-.form-control[type="password"]{
-    width : 60%;
-    float : left;
+.form-control[type="password"] {
+    width: 60%;
+    float: left;
 }
-
-
 /* BEGIN TABLE */
 
 .datagrid table {
@@ -33,7 +47,6 @@
     text-align: left;
     width: 100%;
     table-layout: fixed;
-
 }
 .datagrid {
     font: normal 12px/150% Arial, Helvetica, sans-serif;
@@ -79,21 +92,8 @@
 .datagrid table tbody tr:last-child td {
     border-bottom: none;
 }
-
 /* ------- END TABLE STYLING ------- */
 
-#reverse-geo{
-    margin-left: 420px;
-    font-size: .9em;
-}
-
-#welcome-text{
-    display: inline-block;
-}
-
-#geo-note {
-    /*font-size: .8em;*/
-}
 hr {
     display: block !important;
     height: 1px !important;
@@ -102,9 +102,7 @@ hr {
     margin: 1em 0 !important;
     padding: 0 !important;
 }
-.event-connect-title {
-    display: inline-block !important;
-}
+
 a:link, a:visited {
     color: #eee;
 }
@@ -114,42 +112,7 @@ a:link, a:visited {
     padding-left: 12px;
     padding-right: 12px;
 }
-.block-sm {
-    height: 180px;
-}
-.btn-flat {
-    font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
-    border-radius: 0px;
-    border-width: 0;
-    background-image: none;
-    padding: 16px;
-    margin: 0 auto;
-    margin-top: 15px;
-    width: 70%;
-    font-size: 20pt;
-}
-mini carousel .carousel-inner img {
-    width: 100%;
-    height: 100%;
-}
-#myCarousel {
-    font-size: 90%;
-}
-.carousel-controls-mini {
-    margin-left: 42%;
-}
-.carousel-controls-mini > a {
-    border: 1px solid #eee;
-    margin: 1px;
-    width: 20px;
-    display: block;
-    float: left;
-    text-align: center;
-}
-#carousel-bounding-box {
-    margin: 0 auto;
-    width: 300px;
-}
+
 .jumbotron {
     margin-top: 140px;
 }

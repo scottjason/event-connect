@@ -1,7 +1,7 @@
 var dotenv = require('dotenv')
   , lastFmApi = require('lastfmapi')
   , port = process.env.PORT || 3000
-  , events = require('./eventFetch.js');
+  , eventFetch = require('./eventFetch.js');
     dotenv.load();
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
     this.SECRET = process.env.SECRET;
     this.USERNAME = process.env.USERNAME;
     this.KEY = process.env.KEY;
-    this.events = events;
+    this.eventFetch = eventFetch;
     this.listen();
   },
   listen: function(){
@@ -36,6 +36,6 @@ module.exports = {
   },
   setSession: function() {
     this.lastFm.setSessionCredentials( this.session.username, this.session.key );
-    this.events.initialize( this.lastFm, this.io );
+    this.eventFetch.initialize( this.lastFm, this.io );
   }
 }

@@ -34,8 +34,7 @@
             <div class="rect3"></div>
             <div class="rect4"></div>
           </span>
-          <p>welcome to event.connect</p>
-
+          <p id="sub-title">&nbsp;&nbsp;&nbsp;welcome to event.connect</p>
           <hr>
           <div id="welcome-text">
           <p id="geo-note">If this is your first visit your browser will ask you to share your location.</p>
@@ -43,15 +42,12 @@
           <p>If your favorite artist isn't on their way, make a request and we'll add it their "Artist Wanted Wall."</p>
           </div>
 
-
           <!-- BEGIN USER SEARCH BY ARTIST -->
           <form id="artistFormInput" class="form-inline">
             <input type="text" name="artist" class="form-control" placeholder="Enter Artist">
-            <button type="submit" class="btn btn-primary btn-large">Submit</button>
+            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
           </form>
-
           <!-- END USER SEARCH BY ARTIST -->
-
 
           <!-- BEGIN MUSTACHE.JS RENDER FOR GEO-EVENTS -->
           <script type="text/html" id="geoTemplate">
@@ -83,11 +79,10 @@
             {{/event}}
           </script>
 
-          <!-- THIS DIV IS EMPTY ON PAGE LOAD -->
-          <div id="geoTarget"></div>
+        <div id="geoTarget"></div>
+      <!-- THIS DIV IS EMPTY ON PAGE LOAD, TARGET DIV FOR FETCH GEO EVENTS-->
 
-          <!-- END MUSTACHE.JS RENDER FOR GEO-EVENTS -->
-
+        <!-- END MUSTACHE.JS RENDER FOR GEO-EVENTS -->
         </div>
       </div>
     </div>

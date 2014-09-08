@@ -2,13 +2,13 @@ function GeoResult(){}
 
 GeoResult.prototype.initialize = function( socket ) {
   socket.on('geoResult', function( result ) {
-  this.clean( result, this.renderGeoEvents.bind( this ) )
+    this.clean( result, this.renderGeoEvents.bind( this ) )
   }.bind( this ));
 }
 
 GeoResult.prototype.clean = function( result, callback ) {
   var response = JSON.parse(result);
-  callback( response );
+      callback( response );
 }
 
 GeoResult.prototype.renderGeoEvents = function( response ) {
@@ -20,7 +20,7 @@ GeoResult.prototype.renderGeoEvents = function( response ) {
 
   var artistSelector = document.getElementById( 'artistFormInput' );
       artistSelector.style.display='inline-block';
-  $('#geoTarget').append( output );
+      $('#geoTarget').append( output );
 }
 
 var GeoResult = new GeoResult;
