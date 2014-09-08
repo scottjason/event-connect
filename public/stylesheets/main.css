@@ -26,18 +26,20 @@
 }
 .slogan{
     font-size: .70em;
-    margin-left: 35px;
+    margin-left: 23px;
     line-height: 75% !important;
 }
 
 .learn-love{
     font-size: .88em;
-    margin-left: 35px;
+    margin-left: 30px;
+      color: #00557F;
 }
 
 .event-connect-title {
     font-size: 1.1em;
   display: inline-block !important;
+  color: #00557F;
 }
 /* ------- END TOUCH UPS ------- */
 
