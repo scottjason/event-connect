@@ -30,8 +30,8 @@ GeoResult.prototype.filter = function( resultsArr, callback ) {
 
 GeoResult.prototype.render = function() {
 var template = $('#template').html();
-  Mustache.parse(template);   // optional, speeds up future uses
-  var rendered = Mustache.render(template, {name: "Luke"});
+  Mustache.parse(template);
+  var rendered = Mustache.render(template, {name: "Scott"});
   $('#target').html(rendered);
 
 }
