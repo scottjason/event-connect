@@ -9,13 +9,13 @@ ArtistFetch.prototype.listen = function(socket) {
 ArtistFetch.prototype.collect = function(event) {
   event.preventDefault();
   var artistToFetch = event.target.elements.artist.value
-  this.fetch( artistToFetch );
+  this.pass( artistToFetch );
 }
 
-ArtistFetch.prototype.fetch = function( artist ) {
-console.log( artist )
-
+ArtistFetch.prototype.pass = function( artist ) {
+  this.socket.emit( 'artistPass', artist );
 }
+
 var ArtistFetch = new ArtistFetch;
 
 
