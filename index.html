@@ -35,6 +35,17 @@
             <div class="rect4"></div>
           </span>
           <p id="sub-title">&nbsp;&nbsp;&nbsp;welcome to event.connect</p>
+
+          <!-- RENDER REVERSE GEO LOCAL MUSTACHE.JS -->
+
+      <div id="output"></div>
+
+<script type="text/html" id="test1">
+    <p>{{.}}</p>
+</script>
+
+          <!-- END REVERSE GEO LOCAL MUSTACHE.JS -->
+
           <hr>
           <div id="welcome-text">
           <p class="slogan">&nbsp;&nbsp;We gather the up and coming music events in your area and keep you notified.</p>
@@ -44,13 +55,16 @@
 
 
           <!-- BEGIN USER SEARCH BY ARTIST -->
+
      <!--      <form id="artistFormInput" class="form-inline">
             <input type="text" name="artist" class="form-control" placeholder="Enter Artist">
             <button type="submit" class="btn btn-primary btn-sm">Submit</button>
           </form> -->
+
           <!-- END USER SEARCH BY ARTIST -->
 
           <!-- BEGIN MUSTACHE.JS RENDER FOR GEO-EVENTS -->
+
           <script type="text/html" id="geoTemplate">
             {{#event}}
             <div class="datagrid">
@@ -81,9 +95,9 @@
           </script>
 
         <div id="geoTarget"></div>
-      <!-- THIS DIV IS EMPTY ON PAGE LOAD, TARGET DIV FOR FETCH GEO EVENTS-->
 
         <!-- END MUSTACHE.JS RENDER FOR GEO-EVENTS -->
+
         </div>
       </div>
     </div>
