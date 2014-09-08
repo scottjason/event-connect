@@ -20,7 +20,7 @@ Additionaly, the user can choose to search events by artist as well as request t
 
 **Technologies**
 
-Node.js, Express.js, Socket.io, Mustache.js, MongoDB
+Node.js, Express.js, Mustache.js, Underscore.js, Socket.io, MongoDB
 
 -----------------------------------------------------------------------
 

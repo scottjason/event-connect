@@ -5,6 +5,14 @@ function GeoFetch(){
 }
 
 GeoFetch.prototype.initialize = function() {
+    var artistSelector = document.getElementById( 'artistFormInput' );
+        artistSelector.style.display='none';
+
+    var welcomeText = document.getElementById( 'welcome-text' );
+        welcomeText.style.display='inline-block';
+
+
+
   if ( navigator.geolocation && typeof ( navigator.geolocation.getCurrentPosition ) == "function") {
        navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ), this.errorHandler.bind( this ), { maximumAge: 75000 } );
   }
@@ -23,7 +31,7 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
-   this.renderLocation( userLocation );
+   this.renderLoading( userLocation );
    this.openSockets();
 }
 
@@ -33,12 +41,10 @@ GeoFetch.prototype.openSockets = function() {
   ArtistFetch.initialize( this.socket );
 }
 
-GeoFetch.prototype.renderLoading = function() {
-  console.log("loading")
-}
-
-GeoFetch.prototype.renderLocation = function( location ) {
-  console.log( location );
+GeoFetch.prototype.renderLoading = function( location ) {
+// var template = "{{location}}";
+// html = Mustache.to_html(template, location);
+// document.write(html)
 }
 
 GeoFetch.prototype.errorHandler = function( error ) {

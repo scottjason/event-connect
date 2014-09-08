@@ -10,8 +10,89 @@
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
 
-#geo-note{
-    font-size: .8em;
+/* ------- BEGIN TABLE STYLING ------- */
+
+
+/* BUTTON INLINE ADJUSTEMENT */
+
+.form-control[type="email"]{
+    width : 100%;
+    margin-bottom: 10px;
+}
+
+.form-control[type="password"]{
+    width : 60%;
+    float : left;
+}
+
+
+/* BEGIN TABLE */
+
+.datagrid table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    table-layout: fixed;
+
+}
+.datagrid {
+    font: normal 12px/150% Arial, Helvetica, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    border: 3px solid #006699;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.datagrid table td, .datagrid table th {
+    padding: 12px 5px;
+    overflow: hidden;
+    width: 100px;
+}
+.datagrid table thead th {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));
+    background: -moz-linear-gradient(center top, #006699 5%, #00557F 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+    background-color: #006699;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: bold;
+    border-left: 1px solid #0070A8;
+}
+.datagrid table thead th:first-child {
+    border: none;
+}
+.datagrid table tbody td a {
+    color: #00496B;
+    border-left: 1px solid #E1EEF4;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.datagrid table tbody .alt td {
+    background: #E1EEF4;
+    color: #00496B;
+}
+.datagrid table tbody td:first-child {
+    border-left: none;
+}
+.datagrid table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ------- END TABLE STYLING ------- */
+
+#reverse-geo{
+    margin-left: 420px;
+    font-size: .9em;
+}
+
+#welcome-text{
+    display: inline-block;
+}
+
+#geo-note {
+    /*font-size: .8em;*/
 }
 hr {
     display: block !important;
