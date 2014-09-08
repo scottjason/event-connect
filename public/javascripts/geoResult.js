@@ -24,11 +24,18 @@ GeoResult.prototype.filter = function( resultsArr, callback ) {
         filteredArr.push( resultsArr[i][property] );
     }
   }
-  callback( filteredArr );
+  // callback( filteredArr );
+  callback();
 }
 
-GeoResult.prototype.render = function(arr) {
-  // console.log(arr)
+GeoResult.prototype.render = function() {
+var template = $('#template').html();
+  Mustache.parse(template);   // optional, speeds up future uses
+  var rendered = Mustache.render(template, {name: "Luke"});
+  $('#target').html(rendered);
+
 }
 
 var GeoResult = new GeoResult;
+
+

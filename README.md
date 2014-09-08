@@ -1,3 +1,2 @@
-**Event Connect** ( project in progress )
+**Event Connect**
 
-Live at Modulus.io http://eventconnect-22267.onmodulus.net/
