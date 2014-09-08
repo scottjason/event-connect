@@ -18,7 +18,7 @@ ArtistResult.prototype.filter = function( resultsArr, callback ) {
 }
 
 ArtistResult.prototype.render = function( resultsArr ) {
-  console.log( resultsArr );
+  // console.log( typeof resultsArr)
 }
 
 var ArtistResult = new ArtistResult;
