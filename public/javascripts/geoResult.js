@@ -7,33 +7,25 @@ GeoResult.prototype.initialize = function( socket ) {
 }
 
 GeoResult.prototype.clean = function( result, callback ) {
-  // var resultsArr = [];
   var response = JSON.parse(result);
-  console.log( response )
-  //   resultsArr.push( response.event );
-  // callback( resultsArr, this.render );
+  callback( response, this.render );
 }
 
-GeoResult.prototype.filter = function( resultsArr, callback ) {
-  // var property = ['artist', 'image', 'startDate', 'title', 'url', 'venue'];
-  // var filteredArr = [];
+GeoResult.prototype.filter = function( response, callback ) {
+    // var filteredArr = [];
+    // for( var i = 0; i < response.event.length; i++ ){
+    // filteredArr.push( _.pick( response.event[i], 'artists', 'image', 'startDate', 'tags', 'title', 'url', 'venue' ) );
 
-  // for (var i = 0; i < resultsArr.length; i++) {
-  //   for ( property in resultsArr[i] ) {
-  //     if ( !resultsArr[i].hasOwnProperty( property ) ) continue;
-
-  //       filteredArr.push( resultsArr[i][property] );
-  //   }
-  // }
-  // callback( filteredArr );
+  callback( response );
 }
 
-GeoResult.prototype.render = function( filteredArr ) {
-  console.log( filteredArr )
-// var template = $('#template').html();
-  // Mustache.parse(template);
-  // var rendered = Mustache.render(template, {name: "Scott"});
-  // $('#target').html(rendered);
+GeoResult.prototype.render = function( response ) {
+// var startDate = _.pluck(arr, 'startDate');
+// console.log( response )
+
+var template = $('#geoTemplate').html();
+var output = Mustache.render(template, response);
+$('#geoTarget').append(output);
 
 }
 

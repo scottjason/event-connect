@@ -34,7 +34,7 @@ GeoFetch.prototype.openSockets = function() {
 }
 
 GeoFetch.prototype.renderLoading = function() {
-  console.log("loading")
+  console.log("loading");
 }
 
 GeoFetch.prototype.renderLocation = function( location ) {

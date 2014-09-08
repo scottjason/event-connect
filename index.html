@@ -12,9 +12,12 @@
   <link rel="stylesheet" href="stylesheets/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheets/vendor/bootstrap-responsive.min.css">
   <link rel="stylesheet" href="stylesheets/vendor/loading.css">
+
+       <!-- END STYLE SHEETS, BEGIN VENDOR JAVASCRIPTS -->
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-  <script type="text/javascript" src="javascripts/vendor/underscore.js"></script>
+  <script type="text/javascript" src="javascripts/vendor/underscore-min.js"></script>
   <script type="text/javascript" src="javascripts/vendor/mustache.js"></script>
 
 </head>
@@ -42,10 +45,21 @@
             <button type="submit" class="btn btn-primary btn-large">Submit</button>
           </form> -->
 
+<script type="text/html" id="geoTemplate">
+    <ul>
+        {{#event}}
+        <p>{{startDate}}</p>
+        <p>{{tags.tag}}</p>
+        {{/event}}
+    </ul>
+</script>
+
+<!-- this div is empty on page load -->
+<div id="geoTarget"></div>
         </div>
       </div>
     </div>
-
+       <!-- END BODY, BEGIN DEVELOPER JAVASCRIPTS -->
     <script type="text/javascript" src="javascripts/geoFetch.js"></script>
     <script type="text/javascript" src="javascripts/geoResult.js"></script>
     <script type="text/javascript" src="javascripts/artistFetch.js"></script>
