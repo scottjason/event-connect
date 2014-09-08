@@ -24,15 +24,15 @@ GeoResult.prototype.filter = function( resultsArr, callback ) {
         filteredArr.push( resultsArr[i][property] );
     }
   }
-  // callback( filteredArr );
-  callback();
+  callback( filteredArr );
 }
 
-GeoResult.prototype.render = function() {
-var template = $('#template').html();
-  Mustache.parse(template);
-  var rendered = Mustache.render(template, {name: "Scott"});
-  $('#target').html(rendered);
+GeoResult.prototype.render = function( filteredArr ) {
+  console.log( filteredArr )
+// var template = $('#template').html();
+  // Mustache.parse(template);
+  // var rendered = Mustache.render(template, {name: "Scott"});
+  // $('#target').html(rendered);
 
 }
 
