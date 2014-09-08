@@ -1,8 +1,8 @@
-**Event Connect** ( project in progress )
+## **event.connect** 
 
-Live Site Hosted By Modulus.io 
+.. project in progress ..
 
-http://eventconnect-22267.onmodulus.net/
+Live Site Hosted By Modulus.io:[ event.connect ](http://eventconnect-22267.onmodulus.net/)
 
 -----------------------------------------------------------------------
 
@@ -17,7 +17,16 @@ In an effort to provide information to the artist about where they're wanted mos
 -----------------------------------------------------------------------
 
 **Technologies**
-Node.js, Express.js, Mustache.js, MongoDB
+
+Node.js, Express.js, Socket.io, Mustache.js, MongoDB
+
+-----------------------------------------------------------------------
+
+**What Else**
+
+No instances of **var self = this** were harmed during this production. 
+
+And no instances of **var self = this** were used.
 
 -----------------------------------------------------------------------
 
