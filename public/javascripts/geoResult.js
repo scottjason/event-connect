@@ -28,7 +28,7 @@ GeoResult.prototype.filter = function( resultsArr, callback ) {
 }
 
 GeoResult.prototype.render = function(arr) {
-  console.log(arr)
+  // console.log(arr)
 }
 
 var GeoResult = new GeoResult;
