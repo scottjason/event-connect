@@ -1,14 +1,14 @@
 function ArtistFetch() {}
 
-ArtistFetch.prototype.listen = function(socket) {
+ArtistFetch.prototype.listen = function( socket ) {
   this.socket = socket;
   var selectedArtist = document.getElementById("artistFormInput");
-  selectedArtist.addEventListener("submit", this.collect.bind( this ), false)
+  selectedArtist.addEventListener( "submit", this.callback.bind( this ), false );
 }
 
-ArtistFetch.prototype.collect = function(event) {
+ArtistFetch.prototype.callback = function( event ) {
   event.preventDefault();
-  var artistToFetch = event.target.elements.artist.value
+  var artistToFetch = event.target.elements.artist.value;
   this.pass( artistToFetch );
 }
 
