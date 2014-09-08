@@ -11,6 +11,10 @@ module.exports = {
       socket.on('geoPass', function ( lat, lon ) {
       this.requestByGeo( lat, lon );
     }.bind( this ));
+
+      socket.on('artistPass', function ( artist ) {
+      this.requestByArtist( artist );
+    }.bind( this ));
    }.bind( this ));
   },
   requestByGeo: function( lat, lon ){
@@ -28,7 +32,8 @@ module.exports = {
         return console.log( err );
       }
       var result = JSON.stringify( data );
-      this.io.sockets.emit( 'artistResult', result );
+      console.log( result )
+      // this.io.sockets.emit( 'artistResult', result );
     }.bind( this ));
   }
 }

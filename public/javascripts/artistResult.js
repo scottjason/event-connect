@@ -1,7 +1,5 @@
 function ArtistResult(){}
 
-
-
 ArtistResult.prototype.listen = function( socket ) {
   socket.on('artistResult', function( result ) {
   this.clean( result, this.filter.bind( this ) )
@@ -14,13 +12,13 @@ ArtistResult.prototype.clean = function( result, callback ) {
     resultsArr.push( response.event );
   callback( resultsArr, this.render );
 }
-
+//
 ArtistResult.prototype.filter = function( resultsArr, callback ) {
   callback( resultsArr );
 }
 
 ArtistResult.prototype.render = function( resultsArr ) {
-  // console.log( resultsArr );
+  console.log( resultsArr );
 }
 
 var ArtistResult = new ArtistResult;
