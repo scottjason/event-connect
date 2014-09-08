@@ -45,17 +45,37 @@
             <button type="submit" class="btn btn-primary btn-large">Submit</button>
           </form> -->
 
-<script type="text/html" id="geoTemplate">
-    <ul>
-        {{#event}}
-        <p>{{startDate}}</p>
-        <p>{{tags.tag}}</p>
-        {{/event}}
-    </ul>
-</script>
 
-<!-- this div is empty on page load -->
+
+    <table id="mytable" class="table table-bordered table-striped table-fixed-header">
+      <thead class="header">
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Venue</th>
+          <th>Artists</th>
+          <th>Link</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <td>Link</td> -->
+          <!-- <td>Data Column 3</td> -->
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+
+        <!-- // <td><a href={{url}}>Visit Event Link</a></td> -->
+
+
+<!-- THIS DIV IS EMPTY ON PAGE LOAD -->
 <div id="geoTarget"></div>
+
         </div>
       </div>
     </div>
