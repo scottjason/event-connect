@@ -2,20 +2,27 @@ function ArtistResult(){}
 
 ArtistResult.prototype.listen = function( socket ) {
   socket.on('artistResult', function( result ) {
-  this.clean( result )
+  this.clean( result, this.prep.bind( this ) )
   }.bind( this ));
 }
 
-ArtistResult.prototype.clean = function( result ) {
+ArtistResult.prototype.clean = function( result, callback ) {
   var response = JSON.parse( result );
-  console.log( response );
+  callback( response, this.filter );
 }
 
-ArtistResult.prototype.filter = function() {}
+ArtistResult.prototype.prep = function( response, callback ) {
+  var resultsArr = [];
+  resultsArr.push( response.event );
+  callback( resultsArr, this.render );
+}
 
-ArtistResult.prototype.render = function() {}
+ArtistResult.prototype.filter = function( resultsArr, callback ) {
+  callback( resultsArr );
+}
+
+ArtistResult.prototype.render = function( resultsArr ) {
+  cosnole.log( resultsArr );
+}
 
 var ArtistResult = new ArtistResult;
-
-
-

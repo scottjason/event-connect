@@ -1,15 +1,14 @@
-function GeoResult(){
-}
+function GeoResult(){}
 
 GeoResult.prototype.listen = function( socket ) {
   socket.on('geoResult', function( result ) {
-  this.clean( result )
+  this.clean( result, this.prep.bind( this ) )
   }.bind( this ));
 }
 
-GeoResult.prototype.clean = function( result ) {
+GeoResult.prototype.clean = function( result, callback ) {
   var response = JSON.parse(result);
-  this.prep( response, this.filter );
+  callback( response, this.filter );
 }
 
 GeoResult.prototype.prep = function( response, callback ) {
