@@ -6,7 +6,7 @@ function GeoFetch(){
 
 GeoFetch.prototype.initialize = function() {
   if ( navigator.geolocation && typeof ( navigator.geolocation.getCurrentPosition ) == "function") {
-       navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ) );
+       navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ), this.errorHandler.bind( this ), { maximumAge: 75000 } );
   }
 }
 
@@ -21,7 +21,7 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
-   console.log( userLocation );
+   this.renderUserLocation( userLocation );
    this.openSockets();
 }
 
@@ -29,6 +29,16 @@ GeoFetch.prototype.openSockets = function() {
   GeoResult.initialize( this.socket );
   ArtistResult.initialize( this.socket );
   ArtistFetch.initialize( this.socket );
+}
+
+GeoFetch.prototype.renderUserLocation = function( location ) {
+  console.log( location );
+}
+
+GeoFetch.prototype.errorHandler = function( error ) {
+   if ( error.code == 1 ) {
+    alert( 'We were unable to collect your location. You many need to modify your browser settings.' );
+  }
 }
 
 var GeoFetch = new GeoFetch;
