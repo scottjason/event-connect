@@ -12,7 +12,7 @@ ArtistResult.prototype.clean = function( result, callback ) {
     resultsArr.push( response.event );
   callback( resultsArr, this.render );
 }
-//
+
 ArtistResult.prototype.filter = function( resultsArr, callback ) {
   callback( resultsArr );
 }
