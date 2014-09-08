@@ -4,13 +4,27 @@ function GeoFetch(){
   this.socket = io.connect();
 }
 
-GeoFetch.prototype.collect = function() {
-   navigator.geolocation.getCurrentPosition( this.callback.bind( this ) );
+GeoFetch.prototype.initialize = function() {
+  if ( navigator.geolocation && typeof ( navigator.geolocation.getCurrentPosition ) == "function") {
+       navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ), this.errorHandler.bind( this ), { maximumAge: 75000 } );
+  }
 }
 
-GeoFetch.prototype.callback = function( position ) {
+GeoFetch.prototype.geoCallback = function( position ) {
+  this.renderLoading();
   this.socket.emit( 'geoPass', position.coords.latitude, position.coords.longitude );
-  this.openSockets();
+
+  var latLng = new google.maps.LatLng( position.coords.latitude, position.coords.longitude );
+  var coder = new google.maps.Geocoder();
+      coder.geocode( { 'latLng': latLng }, this.reverseGeoCallback.bind( this ) );
+}
+
+GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
+   if ( status == google.maps.GeocoderStatus.OK ) {
+      var userLocation = results[1].formatted_address;
+   }
+   this.renderLocation( userLocation );
+   this.openSockets();
 }
 
 GeoFetch.prototype.openSockets = function() {
@@ -19,11 +33,23 @@ GeoFetch.prototype.openSockets = function() {
   ArtistFetch.initialize( this.socket );
 }
 
+GeoFetch.prototype.renderLoading = function() {
+  console.log("loading")
+}
+
+GeoFetch.prototype.renderLocation = function( location ) {
+  console.log( location );
+}
+
+GeoFetch.prototype.errorHandler = function( error ) {
+   if ( error.code == 1 ) {
+    alert( 'We were unable to collect your location. You many need to modify your browser settings.' );
+  }
+}
+
 var GeoFetch = new GeoFetch;
-GeoFetch.collect();
+GeoFetch.initialize();
 })
-
-
 
 
 

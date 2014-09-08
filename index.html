@@ -2,51 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Event Connect</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Scott Jason">
-  <link rel="stylesheet" href="stylesheets/main.css">
-  <link rel="stylesheet" href="stylesheets/vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/vendor/bootstrap-responsive.min.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/vendor/modernizer.js"></script>
-  <script type="text/javascript" src="javascripts/vendor/mustache.js"></script>
+    <meta charset="utf-8">
+    <title>Event Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Scott Jason">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/vendor/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="stylesheets/vendor/loading.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="javascripts/vendor/mustache.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="row clearfix">
-      <div class="col-md-12 column">
-        <div class="jumbotron well">
-          <h1>
-          event.connect
-        </h1>
-          <p>
-            - welcome to event.connect -
-            <br>
-            <br>
-            If this is your first visit your browser will ask you to share your location with event connect.
-            <br>
-             <br>
-            We populate the up and coming music events in your area and keep you notified.
-             <br>
-            If your favorite artist isn't on their way, make a request and we'll add it their "Artist Wanted Wall."
-          </p>
+    <div class="container">
 
-          <form id="artistFormInput" class="form-inline">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="jumbotron well" display="inline-block">
+
+                    <h2 class="event-connect-title">
+                        event.connect</h2>
+                    <span class="spinner">
+                        <div class="rect1"></div>
+                        <div class="rect2"></div>
+                        <div class="rect3"></div>
+                        <div class="rect4"></div>
+                    </span>
+                    <p>welcome to event.connect</p>
+
+                    <hr>
+                  <p id="geo-note">If this is your first visit your browser will ask you to share your location.</p>
+
+                    <p>We populate the up and coming music events in your area and keep you notified.</p>
+                    <p>If your favorite artist isn't on their way, make a request and we'll add it their "Artist Wanted Wall."</p>
+
+                    <!--     <form id="artistFormInput" class="form-inline">
             <input type="text" name="artist" class="form-control" placeholder="Enter Artist">
             <button type="submit" class="btn btn-primary btn-large">Submit</button>
-          </form>
+          </form> -->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <script type="text/javascript" src="javascripts/geoFetch.js"></script>
-    <script type="text/javascript" src="javascripts/geoResult.js"></script>
-    <script type="text/javascript" src="javascripts/artistFetch.js"></script>
-    <script type="text/javascript" src="javascripts/artistResult.js"></script>
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="javascripts/geoFetch.js"></script>
+        <script type="text/javascript" src="javascripts/geoResult.js"></script>
+        <script type="text/javascript" src="javascripts/artistFetch.js"></script>
+        <script type="text/javascript" src="javascripts/artistResult.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
 </body>
 
 </html>

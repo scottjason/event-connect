@@ -9,6 +9,21 @@
     background-color: #333;
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
+
+#geo-note{
+    font-size: .8em;
+}
+hr {
+    display: block !important;
+    height: 1px !important;
+    border: 0 !important;
+    border-top: 1px solid #000 !important;
+    margin: 1em 0 !important;
+    padding: 0 !important;
+}
+.event-connect-title {
+    display: inline-block !important;
+}
 a:link, a:visited {
     color: #eee;
 }
@@ -32,9 +47,7 @@ a:link, a:visited {
     width: 70%;
     font-size: 20pt;
 }
- mini carousel
-
-.carousel-inner img {
+mini carousel .carousel-inner img {
     width: 100%;
     height: 100%;
 }
@@ -56,7 +69,6 @@ a:link, a:visited {
     margin: 0 auto;
     width: 300px;
 }
-
 .jumbotron {
-  margin-top: 140px;
+    margin-top: 140px;
 }
