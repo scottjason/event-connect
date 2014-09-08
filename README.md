@@ -1,6 +1,9 @@
 **Event Connect** ( project in progress )
 
-Live Site Hosted By Modulus.io http://eventconnect-22267.onmodulus.net/
+Live Site Hosted By Modulus.io 
+
+http://eventconnect-22267.onmodulus.net/
+
 -----------------------------------------------------------------------
 
 **Description**
