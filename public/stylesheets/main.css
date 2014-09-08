@@ -10,14 +10,20 @@
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
 /* ------- BEGIN TOUCH UPS ------- */
-#userLocation{
-font-size: 0.7em;
-display: inline-block;
-float: right;
-color: #d35400;
-}
 
-#localTarget{
+#userLocation {
+    font-size: 0.7em;
+    display: inline-block;
+    float: right;
+    color: #d35400;
+}
+#loadingGeo {
+    font-size: 0.7em;
+    display: inline-block;
+    float: right;
+    color: #d35400;
+}
+#localTarget {
     font-size: .75em;
 }
 #sub-title {
@@ -33,22 +39,20 @@ color: #d35400;
 #welcome-text {
     display: inline-block;
 }
-.slogan{
+.slogan {
     font-size: .70em;
     margin-left: 23px;
     line-height: 75% !important;
 }
-
-.learn-love{
+.learn-love {
     font-size: .88em;
     margin-left: 30px;
-      color: #00557F;
+    color: #00557F;
 }
-
 .event-connect-title {
     font-size: 1.1em;
-  display: inline-block !important;
-  color: #00557F;
+    display: inline-block !important;
+    color: #00557F;
 }
 /* ------- END TOUCH UPS ------- */
 
@@ -124,7 +128,6 @@ hr {
     margin: 1em 0 !important;
     padding: 0 !important;
 }
-
 a:link, a:visited {
     color: #eee;
 }
@@ -134,7 +137,6 @@ a:link, a:visited {
     padding-left: 12px;
     padding-right: 12px;
 }
-
 .jumbotron {
     margin-top: 80px;
 }
