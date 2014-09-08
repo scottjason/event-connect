@@ -9,6 +9,10 @@
     background-color: #333;
     font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;
 }
+
+#spinner-align{
+    top: 10px;
+}
 .event-connect-title{
 display: inline-block !important;
 }
