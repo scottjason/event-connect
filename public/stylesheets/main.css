@@ -12,10 +12,10 @@
 /* ------- BEGIN TOUCH UPS ------- */
 
 #sub-title {
-    font-size: .8em;
+    font-size: .9em;
 }
 #geo-note {
-    font-size: .8em;
+    font-size: .7em;
 }
 #reverse-geo {
     margin-left: 420px;
@@ -24,8 +24,19 @@
 #welcome-text {
     display: inline-block;
 }
+.slogan{
+    font-size: .70em;
+    margin-left: 35px;
+    line-height: 75% !important;
+}
+
+.learn-love{
+    font-size: .88em;
+    margin-left: 35px;
+}
 
 .event-connect-title {
+    font-size: 1.1em;
   display: inline-block !important;
 }
 /* ------- END TOUCH UPS ------- */
@@ -114,5 +125,5 @@ a:link, a:visited {
 }
 
 .jumbotron {
-    margin-top: 140px;
+    margin-top: 80px;
 }

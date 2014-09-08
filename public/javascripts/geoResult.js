@@ -16,10 +16,10 @@ GeoResult.prototype.renderGeoEvents = function( response ) {
   var output = Mustache.render( template, response );
 
   var welcomeText = document.getElementById( 'welcome-text' )
-      welcomeText.style.display='none';
+      // welcomeText.style.display='none';
 
-  var artistSelector = document.getElementById( 'artistFormInput' );
-      artistSelector.style.display='inline-block';
+  // var artistSelector = document.getElementById( 'artistFormInput' );
+      // artistSelector.style.display='inline-block';
       $('#geoTarget').append( output );
 }
 

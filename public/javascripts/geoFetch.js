@@ -5,11 +5,11 @@ function GeoFetch(){
 }
 
 GeoFetch.prototype.initialize = function() {
-    var artistSelector = document.getElementById( 'artistFormInput' );
-        artistSelector.style.display='none';
+    // var artistSelector = document.getElementById( 'artistFormInput' );
+        // artistSelector.style.display='none';
 
-    var welcomeText = document.getElementById( 'welcome-text' );
-        welcomeText.style.display='inline-block';
+    // var welcomeText = document.getElementById( 'welcome-text' );
+        // welcomeText.style.display='inline-block';
 
   if ( navigator.geolocation && typeof ( navigator.geolocation.getCurrentPosition ) == "function") {
        navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ), this.errorHandler.bind( this ), { maximumAge: 75000 } );
