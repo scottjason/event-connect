@@ -32,8 +32,7 @@ module.exports = {
         return console.log( err );
       }
       var result = JSON.stringify( data );
-      console.log( result )
-      // this.io.sockets.emit( 'artistResult', result );
+      this.io.sockets.emit( 'artistResult', result );
     }.bind( this ));
   }
 }
