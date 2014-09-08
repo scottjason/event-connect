@@ -16,6 +16,7 @@ GeoFetch.prototype.callback = function( position ) {
 GeoFetch.prototype.openSockets = function() {
   GeoResult.listen( this.socket );
   ArtistResult.listen( this.socket );
+  ArtistFetch.listen( this.socket );
 }
 
 var GeoFetch = new GeoFetch;

@@ -11,6 +11,10 @@ module.exports = {
       socket.on('geoPass', function ( lat, lon ) {
       this.requestByGeo( lat, lon );
     }.bind( this ));
+
+      socket.on('artistPass', function ( artist ) {
+      this.requestByArtist( artist );
+    }.bind( this ));
    }.bind( this ));
   },
   requestByGeo: function( lat, lon ){
