@@ -1,6 +1,6 @@
 function ArtistResult(){}
 
-ArtistResult.prototype.listen = function( socket ) {
+ArtistResult.prototype.initialize = function( socket ) {
   socket.on('artistResult', function( result ) {
   this.clean( result, this.filter.bind( this ) )
   }.bind( this ));

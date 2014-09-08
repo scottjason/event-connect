@@ -1,6 +1,6 @@
 function ArtistFetch() {}
 
-ArtistFetch.prototype.listen = function( socket ) {
+ArtistFetch.prototype.initialize = function( socket ) {
   this.socket = socket;
   var selectedArtist = document.getElementById("artistFormInput");
   selectedArtist.addEventListener( "submit", this.callback.bind( this ), false );

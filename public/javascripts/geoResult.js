@@ -1,6 +1,6 @@
 function GeoResult(){}
 
-GeoResult.prototype.listen = function( socket ) {
+GeoResult.prototype.initialize = function( socket ) {
   socket.on('geoResult', function( result ) {
   this.clean( result, this.filter.bind( this ) )
   }.bind( this ));
