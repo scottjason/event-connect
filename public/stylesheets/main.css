@@ -12,6 +12,22 @@
 
 /* ------- BEGIN TABLE STYLING ------- */
 
+
+/* BUTTON INLINE ADJUSTEMENT */
+
+.form-control[type="email"]{
+    width : 100%;
+    margin-bottom: 10px;
+}
+
+.form-control[type="password"]{
+    width : 60%;
+    float : left;
+}
+
+
+/* BEGIN TABLE */
+
 .datagrid table {
     border-collapse: collapse;
     text-align: left;
@@ -66,13 +82,17 @@
 
 /* ------- END TABLE STYLING ------- */
 
+#reverse-geo{
+    margin-left: 420px;
+    font-size: .9em;
+}
+
 #welcome-text{
     display: inline-block;
 }
 
-
 #geo-note {
-    font-size: .8em;
+    /*font-size: .8em;*/
 }
 hr {
     display: block !important;
