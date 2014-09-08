@@ -5,12 +5,6 @@ function GeoFetch(){
 }
 
 GeoFetch.prototype.initialize = function() {
-    var artistSelector = document.getElementById( 'artistFormInput' );
-        artistSelector.style.display='none';
-
-    var welcomeText = document.getElementById( 'welcome-text' );
-        welcomeText.style.display='inline-block';
-
   if ( navigator.geolocation && typeof ( navigator.geolocation.getCurrentPosition ) == "function") {
        navigator.geolocation.getCurrentPosition( this.geoCallback.bind( this ), this.errorHandler.bind( this ), { maximumAge: 75000 } );
   }
@@ -29,7 +23,7 @@ GeoFetch.prototype.reverseGeoCallback = function( results, status ) {
    if ( status == google.maps.GeocoderStatus.OK ) {
       var userLocation = results[1].formatted_address;
    }
-
+   // console.log(userLocation)
    this.renderLoading( userLocation );
    this.openSockets();
 }
@@ -41,7 +35,7 @@ GeoFetch.prototype.openSockets = function() {
 }
 
 GeoFetch.prototype.renderLoading = function( location ) {
-  console.log( location )
+  $( "#userLocation" ).html( location );
 }
 
 GeoFetch.prototype.errorHandler = function( error ) {
@@ -52,8 +46,8 @@ GeoFetch.prototype.errorHandler = function( error ) {
 
 var GeoFetch = new GeoFetch;
 GeoFetch.initialize();
-})
 
+});
 
 
 
