@@ -11,13 +11,20 @@
 }
 /* ------ TOUCH UPS ------- */
 
-.myStyle input[type="text"] {
-   height: 32px !important;
-   width: 150px !important;
-   font-size: 10px !important;
-   line-height: 32px !important;
+input[type=submit] {
+    border: 0px solid #fff;
+    color: white;
+    background: #069;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-top: 3px;
 }
-
+input[type=submit]:hover {
+    background: #00259B;
+}
+input[type=text] {
+    width: 250px;
+}
 #header-right-dymanic {
     position: absolute;
     margin-left: 650px;
@@ -26,19 +33,15 @@
 }
 #userLocation {
     font-size: 0.7em;
-    display: inline-block;
     float: right;
     color: #069;
-    top: 20px;
-    /*font-weight: bold;*/
+    top: 55px;
     white-space: nowrap;
 }
 #loadingGeo {
     font-size: 0.7em;
-    display: inline-block;
     float: right;
     color: #069;
-    /*font-weight: bold;*/
 }
 #localTarget {
     font-size: .75em;
@@ -55,6 +58,7 @@
 }
 #welcome-text {
     display: inline-block;
+    top: 30px;
 }
 .slogan {
     font-size: .70em;
@@ -146,5 +150,10 @@ a:link, a:visited {
 }
 .jumbotron {
     margin-top: 80px;
+    border-radius: black solid 2px !important;
 }
-
+.navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom {
+    border-radius: 0;
+    background-color: #000 !important;
+    text-align: center !important;
+}

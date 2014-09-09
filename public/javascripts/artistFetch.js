@@ -7,7 +7,6 @@ ArtistFetch.prototype.initialize = function( socket ) {
 }
 
 ArtistFetch.prototype.callback = function( event ) {
-    console.log("made")
   event.preventDefault();
   var artistToFetch = event.target.elements.artist.value;
   this.pass( artistToFetch );
