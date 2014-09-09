@@ -6,18 +6,24 @@
   <title>Event Connect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Scott Jason">
+
+ <!--********************* BEGIN STYLE SHEETS *********************-->
+
   <link rel="stylesheet" href="stylesheets/main.css">
   <link rel="stylesheet" href="stylesheets/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheets/vendor/bootstrap-responsive.min.css">
   <link rel="stylesheet" href="stylesheets/vendor/logo.css">
 
-  <!-- END STYLE SHEETS, BEGIN VENDOR JAVASCRIPTS -->
+<!--********************* END STYLE SHEETS, BEGIN VENDOR JAVASCRIPTS *********************-->
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   <script type="text/javascript" src="javascripts/vendor/underscore-min.js"></script>
   <script type="text/javascript" src="javascripts/vendor/mustache.js"></script>
 </head>
+
+<!--********************* END VENDOR JAVASCRIPTS, BEGIN BODY *********************-->
+
 <body>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -52,7 +58,9 @@
             <p id="userLocation"></p>
             <p id="loadingGeo">One moment while we gather events in your area.</p>
           </div>
-          <!-- BEGIN MUSTACHE.JS RENDER FOR GEO-EVENTS -->
+
+<!--********************* BEGIN MUSTACHE JSON RENDER *********************-->
+
           <script type="text/html" id="geoTemplate">
             {{#event}}
             <div class="datagrid">
@@ -82,12 +90,16 @@
           </script>
 
           <div id="geoTarget"></div>
-          <!-- END MUSTACHE.JS RENDER FOR GEO-EVENTS -->
+
+<!--********************* END MUSTACHE JSON RENDER ********************* -->
+
         </div>
       </div>
     </div>
   </div>
-  <!-- END BODY, BEGIN DEVELOPER JAVASCRIPTS -->
+
+<!--********************* END BODY, BEGIN DEVELOPER JAVASCRIPTS ********************* -->
+
   <script type="text/javascript" src="javascripts/geoFetch.js"></script>
   <script type="text/javascript" src="javascripts/geoResult.js"></script>
   <script type="text/javascript" src="javascripts/artistFetch.js"></script>
