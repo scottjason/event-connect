@@ -2,24 +2,20 @@ function ArtistResult(){}
 
 ArtistResult.prototype.initialize = function( socket ) {
   socket.on('artistResult', function( result ) {
-  this.clean( result, this.filter.bind( this ) )
+  this.clean( result, this.renderArtistQuery.bind( this ) )
   }.bind( this ));
 }
 
 ArtistResult.prototype.clean = function( result, callback ) {
-  var resultsArr = [];
   var response = JSON.parse( result );
-      resultsArr.push( response.event );
-
-  callback( resultsArr, this.render );
+      callback( response );
 }
 
-ArtistResult.prototype.filter = function( resultsArr, callback ) {
-  callback( resultsArr );
-}
-
-ArtistResult.prototype.render = function( resultsArr ) {
-  console.log( resultsArr)
+ArtistResult.prototype.renderArtistQuery = function( response ) {
+var template = $('#geoTemplate').html();
+Mustache.parse(template);
+var output = Mustache.render( template, response );
+$('#geoTarget').html( output );
 }
 
 var ArtistResult = new ArtistResult;
