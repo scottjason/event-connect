@@ -12,6 +12,7 @@ GeoResult.prototype.clean = function( result, callback ) {
 }
 
 GeoResult.prototype.renderGeoEvents = function( response ) {
+  console.log( response )
   var template = $('#geoTemplate').html();
   var output = Mustache.render( template, response );
   $('#geoTarget').append( output );
