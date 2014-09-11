@@ -34,12 +34,6 @@ LastFm, GoogleMaps & Navigator
 
 -----------------------------------------------------------------------
 
-**What Else**
-
-No instances of **var self = this** were used or harmed during this production. 
-
------------------------------------------------------------------------
-
 **Authored By**
 
 Scott Jason
